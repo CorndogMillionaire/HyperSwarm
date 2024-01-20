@@ -1,4 +1,4 @@
-from HyperSwarm.api import Generate
+from api import Generate
 from colorama import Fore, Back, Style
 import textwrap
 import chromadb
