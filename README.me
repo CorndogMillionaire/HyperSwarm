@@ -6,9 +6,9 @@ Or if you update the api.py with whatever api you wanna use, you can also use co
 # Howto
 Nodes are the Agents, they need unique IDs, a prompt, optionally context, memory_enable=True by default. setting this to default will turn it off.
 Hyperedges determine how information flows from agent to agent.
-Hyperedges have input and output nodes.
-By default the hyperedge update method updates the output nodes with inputs from the outputs of all output nodes.
-So when you call hyperedge.update() it will read the outputs of the input nodes and feed them to the output nodes.
+Hyperedges have a unique ID, input and output nodes and a hyper prompt template 'hyperpt' that will add to all contained nodes prompts.
+By default the hyperedge update method updates the output nodes with inputs from the outputs of all input nodes.
+So when you call hyperedge.update() it will read the outputs of the input nodes and feed them to the output nodes, then call all of the output nodes update method.
 If you only want to initialize your input nodes to generate their outputs, just call hyperedge.initialize()
 
 # About
