@@ -1,0 +1,16 @@
+### HyperSwarm, a hypergraph based multi-agent LLM framework
+# About
+This is a lightweight multi-agent framework that works with oobabooga text-generation-webui
+Or if you update the api.py with whatever api you wanna use, you can also use commercial LLM apis.
+
+# Howto
+Nodes are the Agents, they need unique IDs, a prompt, optionally context, memory_enable=True by default. setting this to default will turn it off.
+Hyperedges determine how information flows from agent to agent.
+Hyperedges have input and output nodes.
+By default the hyperedge update method updates the output nodes with inputs from the outputs of all output nodes.
+So when you call hyperedge.update() it will read the outputs of the input nodes and feed them to the output nodes.
+If you only want to initialize your input nodes to generate their outputs, just call hyperedge.initialize()
+
+# About
+This is experimental and unfinished
+use on your own discretion
