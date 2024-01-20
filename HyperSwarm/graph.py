@@ -133,6 +133,9 @@ class Hyperedge:
                 raise TypeError(inputs)
         except TypeError as e:
             print(Fore.RED+"TypeError: Couldn't add object")
+    def initialize(self):
+        for node in self.input_nodes:
+            node.update()
 
     def update(self):
         # Normal forward order, output nodes update method are called with the outputs from all input nodes
